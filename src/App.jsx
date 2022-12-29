@@ -1,16 +1,27 @@
-import { Route, Routes } from "react-router-dom"
-import { About, Contact, Main, NavBar, Portfolio } from "./components"
+import { Route, Routes, useLocation } from "react-router-dom"
+import { About, Contact, Main, Motion, NavBar, Portfolio } from "./components"
+
 
 function App() {
 
+  const location = useLocation()
+
   return (
-    <div className="font-poppins">
+    <div className="font-poppins bg-white dark:bg-secondary">
       <NavBar />
-      <Routes>
-        <Route path='/' element={<Main />}/>
-        <Route path='/about' element={<About />} />
-        <Route path='/portfolio' element={<Portfolio />} />
-        <Route path='/contact' element={<Contact />} />
+      <Routes location={location} key={location.pathname}>
+        <Route path='/' element={<Motion>
+                                  <Main />
+                                </Motion>}/>
+        <Route path='/about' element={<Motion>
+                                        <About />
+                                      </Motion>} />
+        <Route path='/portfolio' element={<Motion>
+                                            <Portfolio />
+                                          </Motion>} />
+        <Route path='/contact' element={<Motion>
+                                          <Contact />
+                                        </Motion>} />
       </Routes>
     </div>
   )

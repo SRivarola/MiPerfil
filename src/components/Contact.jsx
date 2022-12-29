@@ -1,4 +1,5 @@
 import { BsLinkedin, BsGithub } from "react-icons/bs"
+import { motion } from "framer-motion"
 import { GoMail } from "react-icons/go"
 import { AiFillCopy } from "react-icons/ai"
 import { CopyToClipboard } from 'react-copy-to-clipboard'
@@ -29,18 +30,34 @@ const Contact = () => {
   }
 
   return (
-    <div className="h-screen flex flex-col pb-[60px] pt-[140px] items-center justify-between bg-primary dark:bg-secondary">
+    <div className="h-screen flex flex-col pb-[60px] pt-[140px] items-center justify-start gap-16 sm:gap-0 sm:justify-between bg-primary dark:bg-secondary">
       <div>
-        <h2 className="text-center text-blue text-4xl font-semibold">Contacto</h2>
+        <h2 className="text-center text-blue text-2xl sm:text-4xl font-semibold">Contacto</h2>
         <div className="w-[200px] pt-8"><hr/></div>
       </div>
       <div className="flex gap-20 text-black dark:text-primary">
-        <button className="text-4xl" onClick={() => handleNavigate('https://www.linkedin.com/in/santiago-rivarola/')}>
+        <motion.button
+          className="text-4xl"
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.8 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleNavigate('https://www.linkedin.com/in/santiago-rivarola/')}
+        >
           <BsLinkedin />
-        </button>
-        <button className="text-4xl" onClick={() => handleNavigate('https://github.com/SRivarola')}>
+        </motion.button>
+        <motion.button
+          className="text-4xl"
+          whileHover={{
+            scale: 1.2,
+            transition: { duration: 0.8 },
+          }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleNavigate('https://github.com/SRivarola')}
+        >
           <BsGithub />
-        </button>
+        </motion.button>
       </div>
       <div className="flex gap-8 items-center justify-center text-4xl text-black dark:text-primary">
           <GoMail />
