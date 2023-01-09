@@ -5,26 +5,25 @@ import './portfolio.css'
 
 const Portfolio = () => {
 
-  const [matches, setMatches] = useState(false)
+  const [isPhone, setIsPhone] = useState( window.innerWidth > 768 ? false : true )
   const mql = window.matchMedia('(max-width:768px)')
   
   const handleNavigate = (route) =>{
     window.open(route, '_blank')
   }
 
-  const onHandlerChange = (e) => {
-    setMatches(mql.matches)
+  const handleResize = (e) => {
+    window.innerWidth < 900 ? setIsPhone(true) : setIsPhone(false)
   }
 
   useEffect(() => {
-    mql.addEventListener('change', onHandlerChange)
-    return () => {
-      mql.removeEventListener('change', onHandlerChange)
-    };
+    handleResize()
+    window.addEventListener("resize", handleResize)
+    return () => window.removeEventListener("resize", handleResize)
   }, []);
 
   return (
-    <div className="flex flex-col pt-[70px] pb-[100px] items-center bg-primary dark:bg-secondary">
+    <div className="flex flex-col pt-[70px] pb-[110px] items-center bg-primary dark:bg-secondary">
         <h2 className='text-center mt-8 text-blue text-2xl sm:text-4xl font-semibold'>Portfolio</h2>
         <div className="w-[200px] m-6"><hr/></div>
         <div className="flex flex-col items-center gap-10">
@@ -62,7 +61,7 @@ const Portfolio = () => {
                     </motion.button>
                   </div>
                 </div>
-                <img src={matches ? item.imgWide : item.imgPortada} className="product_img" alt="foto del producto"/>
+                <img src={isPhone ? item.imgWide : item.imgPortada} className="product_img drop-shadow-lg" alt="foto del producto"/>
                 </div>
             ))
           }

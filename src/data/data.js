@@ -45,13 +45,13 @@ export const portfolio = [
     },
     {
         "id": "04",
-        "name": "Tripulantes LATAM en lucha",
-        "imgLogo": "https://firebasestorage.googleapis.com/v0/b/fixturewolrdcup2022.appspot.com/o/portfolio%2Ftcp_logo.png?alt=media&token=b8724303-dc9e-4abe-836d-bb74113dc7c0",
-        "imgPortada": "https://firebasestorage.googleapis.com/v0/b/fixturewolrdcup2022.appspot.com/o/portfolio%2Ftcpenlucha1.jpg?alt=media&token=4201420d-323b-4663-9cca-b354e144a5c6",
-        "imgWide": "https://firebasestorage.googleapis.com/v0/b/fixturewolrdcup2022.appspot.com/o/portfolio%2FtcpenluchaWide.jpg?alt=media&token=fd225456-543c-4087-8842-baeecdf25788",
-        "color": "#1A027D",
-        "desc": "Trabajo realizado para un grupo de ex-empleados de LATAM Argentina, utilizando Bootstrap y modificando sus estilos en css a traves de scss.",
-        "site": "https://srivarola.github.io/latamEnLucha/",
-        "repo": "https://github.com/SRivarola/latamEnLucha"
+        "name": "Poke-Quiz",
+        "imgLogo": "https://firebasestorage.googleapis.com/v0/b/fixturewolrdcup2022.appspot.com/o/portfolio%2FpokeLogo.png?alt=media&token=35598c62-477e-49b8-99e5-e943f1e553e8",
+        "imgPortada": "https://firebasestorage.googleapis.com/v0/b/fixturewolrdcup2022.appspot.com/o/portfolio%2FpokeSiteMobile.jpg?alt=media&token=157a3a20-c831-49c5-a573-8d76ffdfe425",
+        "imgWide": "https://firebasestorage.googleapis.com/v0/b/fixturewolrdcup2022.appspot.com/o/portfolio%2FpokeSiteDesk.jpg?alt=media&token=b5a696b9-c952-4f94-a586-2ddf60359a69",
+        "color": "#FF6900",
+        "desc": "El objetivo del juego es obtener las figuritas de los pokemon y llenar el album. Realizado en React JS, consumiendo la pokeAPI y estilos mayormente en tailwind",
+        "site": "https://pokequizbysr.netlify.app/",
+        "repo": "https://github.com/SRivarola/PokeQuiz"
     }
 ]

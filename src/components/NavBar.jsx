@@ -73,7 +73,7 @@ const NavBar = () => {
             </li>
             {
                 menu &&
-                <ul className="sm:hidden absolute w-screen flex flex-col justify-center items-center top-[70px] left-0 gap-5 pt-3 text-black dark:text-white bg-primary dark:bg-secondary">
+                <ul className="sm:hidden absolute w-screen shadow-xl flex flex-col justify-center items-center top-[70px] border-t left-0 gap-5 py-3 text-black dark:text-white bg-primary dark:bg-secondary">
                     <li className="text-center" onClick={() => setMenu(false)}><NavLink className={({ isActive }) =>  isActive ? 'text-blue font-semibold' : 'text-black dark:text-primary'} to='/about'>Sobre mí</NavLink></li>
                     <li className="text-center" onClick={() => setMenu(false)}><NavLink className={({ isActive }) =>  isActive ? 'text-blue font-semibold' : 'text-black dark:text-primary'} to='/portfolio'>Portfolio</NavLink></li>
                     <li className="text-center" onClick={() => setMenu(false)}><NavLink className={({ isActive }) =>  isActive ? 'text-blue font-semibold' : 'text-black dark:text-primary'} to='/contact'>Contacto</NavLink></li>
